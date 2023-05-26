@@ -47,15 +47,15 @@
 ## Running the classifiers 
 You can run the pre-trained classifiers like this: 
 
-from joblib import load
+    from joblib import load
 
-path = 'my_path'
-filenames = ['binary_classifier.joblib', 'classifier_all_classes.joblib', 'classifier_durative.joblib']
+    path = 'my_path'
+    filenames = ['binary_classifier.joblib', 'classifier_all_classes.joblib', 'classifier_durative.joblib']
 
-for filename in filenames:
-    loaded_model = joblib.load(path+filename)
-    pred = loaded_model.predict(['Die Götter wohnen auf dem Olymp.']) 
-    print(pred)
+    for filename in filenames:
+        loaded_model = joblib.load(path+filename)
+        pred = loaded_model.predict(['Die Götter wohnen auf dem Olymp.']) 
+        print(pred)
 
 ## Literature
 Zgoll, Christian. Tractatus mythologicus: Theorie und Methodik zur Erforschung von Mythen als Grundlegung einer allgemeinen, transmedialen und komparatistischen Stoffwissenschaft, Berlin, Boston: De Gruyter, 2019. https://doi.org/10.1515/9783110541588
